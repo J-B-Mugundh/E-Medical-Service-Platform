@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Consultancy</title>
+    <link rel="stylesheet" href="oc.css" />
+  </head>
+  <body>
+    <section class="container">
+      <nav>
+        <img src="/images/logo.png" class="logo" />
+        <ul>
+          <li><img src="/images/live.png" class="active" /></li>
+          <li><img src="/images/video.png" /></li>
+          <li><img src="/images/message.png" /></li>
+          <li><img src="/images/notification.png" /></li>
+          <li><img src="/images/setting.png" /></li>
+        </ul>
+      </nav>
+      <div class="header">
+        <div class="headtool">
+          <img src="/images/search.png" />
+          <img src="/images/menu.png" />
+        </div>
+        <div class="frame">
+          <div class="host">
+            <img src="/images/image.png" />
+            <div class="controls">
+              <img src="/images/chat.png" />
+              <img src="/images/disconnect.png" />
+              <img src="/images/call.png" id="call" />
+              <img src="/images/mic.png" />
+              <img src="/images/cast.png" />
+            </div>
+          </div>
+          <div class="chat">
+            <h3>In call</h3>
+            <div class="joined">
+              <div class="person1">
+                <img src="doctorm.jpeg" />
+                <h2>
+                  Dr. Rashmika <br />
+                  <span>MBBS Cardiologist</span>
+                </h2>
+                <a href="#">Details</a>
+              </div>
+              <div class="person2">
+                <img src="patientm.jpeg" />
+                <h2>
+                  Ms. Sai <br />
+                  <span>Customer: #12345</span>
+                </h2>
+                <a href="#">Details</a>
+              </div>
+            </div>
+            <center>
+              <span id="qq">Chat with us</span>
+              <textarea
+                id="textarea"
+                onfocus="func1()"
+                onblur="func2()"
+              ></textarea>
+            </center>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      function func1() {
+        let a = document.getElementById("qq");
+        a.style.bottom = "215px";
+        a.style.color = "white";
+      }
+      function func2() {
+        let b = document.getElementById("qq");
+        let c = document.getElementById("textarea").value;
+        b.style.bottom = "170px";
+        b.style.color = "green";
+        if (c.length == 0) b.style.display = "block";
+        if (c.length > 0) b.style.display = "none";
+      }
+    </script>
+  </body>
+</html>

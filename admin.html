@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ADMIN LOGIN</title>
+    <link rel="stylesheet" href="admin1.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="snackbar">Please, Enter the Vaild details.....</div>
+    <section>
+      <div class="color"></div>
+      <div class="color"></div>
+      <div class="color"></div>
+      <div class="box">
+        <div class="square" style="--i: 0"></div>
+        <div class="square" style="--i: 1"></div>
+        <div class="square" style="--i: 2"></div>
+        <div class="square" style="--i: 3"></div>
+        <div class="square" style="--i: 4"></div>
+
+        <div class="container">
+          <div class="form">
+            <h2 style="color: black">ADMIN LOGIN</h2>
+            <form>
+              <div class="inputbox">
+                <input type="text" placeholder="USERNAME" id="name" />
+              </div>
+              <div class="inputbox">
+                <input type="password" placeholder="USERID" id="uid" />
+              </div>
+              <div class="inputbox">
+                <input type="password" placeholder="PASSWORD" id="pass" />
+              </div>
+              <div class="inputbox">
+                <input
+                  type="submit"
+                  onclick="return login()"
+                  value="LOG IN"
+                  id="sub"
+                />
+              </div>
+              <p class="forget">
+                Forget password?
+                <a href="http://127.0.0.1:5500/coming.html">Click here</a>
+              </p>
+              <p class="forget">
+                Don't Have Account?
+                <a href="http://127.0.0.1:5500/coming.html">Sign up</a>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script>
+    let name = "admin";
+    let id = "100";
+    let password = "MNBVCXZ";
+    function login() {
+      const ename = document.getElementById("name").value;
+      const eid = document.getElementById("uid").value;
+      const epassword = document.getElementById("pass").value;
+
+      console.log(epassword);
+
+      if (name != ename || eid != id || password != epassword) {
+        var x = document.getElementById("snackbar");
+        x.className = "show";
+        setTimeout(function () {
+          x.className = x.className.replace("show", "");
+          return false;
+        }, 5000);
+      }
+
+      if (name === ename && id === eid && password === epassword) {
+        window.location.href = "http://localhost/EPHARMACY/admin/index.php";
+      }
+      return false;
+    }
+  </script>
+</html>

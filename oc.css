@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 20px;
+}
+section.container {
+  background-color: #00122e;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+nav {
+  width: 100px;
+  background-color: #182842;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding: 10px 0;
+}
+nav .logo {
+  width: 56px;
+  margin: auto;
+  display: block;
+  cursor: pointer;
+}
+nav ul {
+  margin-top: 160px;
+}
+nav ul li {
+  list-style: none;
+}
+nav ul li img {
+  width: 60px;
+  border-radius: 10px;
+  margin: 10px auto;
+  padding: 10px;
+  display: block;
+  opacity: 0.7;
+  transition: all 0.8s;
+  cursor: pointer;
+}
+nav ul li img:hover {
+  opacity: 1;
+  background-color: #4d6181;
+}
+.header {
+  margin-left: 120px;
+  padding: 10px;
+}
+.header .headtool {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.header .headtool img {
+  padding: 10px;
+  margin-left: 25px;
+}
+.frame {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.host {
+  flex-basis: 65%;
+}
+.chat {
+  flex-basis: 33%;
+  background-color: #182842;
+  height: 72vh;
+  border-radius: 10px;
+  color: white;
+  position: relative;
+}
+.host img {
+  border-radius: 15px;
+  width: 100%;
+  height: 72vh;
+  object-fit: cover;
+}
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -10px;
+}
+.controls img {
+  width: 40px;
+  height: 40px;
+  margin: 20px 10px;
+  cursor: pointer;
+  transition: all 1s;
+}
+.controls img:hover {
+  transform: translateY(-10px);
+}
+.chat textarea {
+  width: 80%;
+  height: 150px;
+  font-size: 16px;
+}
+h3 {
+  text-align: center;
+  margin: 7px;
+}
+.joined {
+  border-radius: 15px;
+  padding: 30px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.joined .person1,
+.joined .person2 {
+  flex-basis: 48%;
+  width: 100px;
+  height: 160px;
+  background-color: #8cafe9;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  cursor: pointer;
+  flex-direction: column;
+}
+.person1 img,
+.person2 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  transition: all 1s;
+  z-index: 3;
+}
+.person1 img:hover,
+.person2 img:hover {
+  opacity: 0;
+}
+h2 {
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+.person1 a,
+.person2 a {
+  text-decoration: none;
+  font-size: 18px;
+  margin-top: 20px;
+  font-weight: 900;
+}
+#qq {
+  position: absolute;
+  bottom: 170px;
+  left: 150px;
+  color: purple;
+  font-weight: bolder;
+  transition: all 1s;
+}
